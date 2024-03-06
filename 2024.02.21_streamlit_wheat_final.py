@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[7]:
 
 
 import numpy as np
@@ -15,16 +15,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 import matplotlib.pyplot as plt
 import joblib
-
-
-# In[2]:
-
-
 import streamlit as st
 import pandas as pd
 
 
-# In[3]:
+# In[8]:
 
 
 st.header('Artificial Intelligence Prediction of US wheat variety')
@@ -53,7 +48,7 @@ if uploaded_file:
 
      
 
-    df_train = pd.read_excel("C:\\Users\\jyh11_unz2rwp\\Desktop\\AI\\24 winter\\US wheat-dataset-sample.xlsx", header = 0)
+    df_train = pd.read_excel("US wheat-dataset-sample.xlsx", header = 0)
 
     df_train1 = df_train.drop(["Year", "Variety", "Volume", 'Sample'], axis = 1)
 
@@ -88,6 +83,12 @@ if uploaded_file:
     st.write('예측되는 품종', result[0])
 
     st.write(' ')
+
+
+# In[4]:
+
+
+#pip list --format=freeze > requirements.txt
 
 
 # In[ ]:
